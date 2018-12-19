@@ -12,7 +12,7 @@ function sendMessage() {
     // apps/device token generated from firebase iOS/Android sdk
 	$token = ''; 
     // server key getting from.. Firebase Console > Setting > Cloud Messaging Tab
-	$key = ''; 
+	$severKey = ''; 
 	$body = [
         'to' => $token,
         'priority' => 'high',
@@ -27,7 +27,7 @@ function sendMessage() {
         // https://firebase.google.com/docs/cloud-messaging/server#implementing-http-connection-server-protocol
         $headers = [
             'Content-Type' => 'application/json',
-            'Authorization' => 'key=' . $key,
+            'Authorization' => 'key=' . $severKey,
         ];
         
         // send request
